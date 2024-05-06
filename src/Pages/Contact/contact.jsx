@@ -1,7 +1,8 @@
 import "./contact.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { FaBeer } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
+
 
 const contact = () => {
   
@@ -11,10 +12,13 @@ const contact = () => {
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
 
+
   function handleSubmit(e) {
     e.preventDefault();
-    setResult(`Form has been submitted with with Input: ${name}. Email me on:${email}. Contact me on:${phone}. My message: ${message}` );
-  
+  let setResult =`Form has been submitted with with Input: ${name}. Email me on:${email}. Contact me on:${phone}. My message: ${message}` ;
+
+  alert(setResult)
+ 
   }
 
 
@@ -28,11 +32,14 @@ const contact = () => {
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       />
 
+
+
       <div className="contact-form">
         <div className="contact-page">
+        <h2><FaEyeSlash/></h2>
           <h3>Get in touch with us</h3>
           <h2>Contact the Team</h2>
-
+          
           <p>
             Have questions or feedback? Reach out!were here to help and ensure
             your experience <br />
@@ -78,7 +85,12 @@ const contact = () => {
 
           <h2>Send a Message</h2>
 
-          <form action="" onSubmit={handleSubmit}>
+  
+
+
+  
+
+<form action="" onSubmit={handleSubmit}>
             <input
               type="text"
               name="F-name" 
@@ -118,6 +130,11 @@ const contact = () => {
               Send Message <i className="fa-solid fa-arrow-right"></i>{" "}
             </button>
           </form>
+
+
+
+
+
 
           <h4>{result}</h4>
           
