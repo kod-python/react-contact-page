@@ -1,0 +1,338 @@
+
+/* contact page starts here */
+
+.contact-page h3{
+    font-family:cursive;
+    color: green;
+    font-style: italic;
+    padding-bottom: 20px;
+}
+
+.contact-page h2{
+    padding-bottom: 20px;
+}
+
+.contact-page p{
+ padding-bottom: 20px;
+}
+
+.contact-page .cont-phone{
+    display: flex;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+
+
+
+.contact-page .cont-envelope{
+    display: flex;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+
+.contact-page .cont-location{
+    display: flex;
+   gap: 10px;
+}
+
+
+
+.contact-page .fa-solid{
+    font-size: 0.9rem;
+    border: 1px solid;
+    border-radius: 30px;
+    padding: 15px;
+    color: green;
+    background-color: rgb(247, 245, 245);
+}
+
+
+.contact-page .cont-location p{
+    line-height: 1.5rem;
+}
+
+
+.contact-page .cont-phone p{
+    line-height: 1.5rem;
+}
+
+.contact-page .cont-envelope p{
+    line-height: 1.5rem;
+}
+
+
+/* contact page ends here */
+
+
+
+/* universal */
+
+.contact-form{
+display: flex;
+
+align-items: center;
+justify-content: space-around;
+margin: 90px;
+
+
+}
+/* universla ends here */
+
+
+/* form page starts here */
+
+.form-page h3{
+
+    font-family:cursive;
+    color: green;
+    font-style: italic;
+    padding-bottom: 20px;
+    margin: 10px;
+}
+
+
+.form-page h2{
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px;
+}
+
+
+
+.form-page input{
+    display: grid;
+    padding: 1rem 1rem;
+    width: 500px;
+    margin: 10px;
+    background-color: rgb(177, 171, 171);
+    border: none;
+
+}
+.form-page textarea{
+    display: grid;
+    margin: 10px;
+    padding: 10px;
+    width: 500px;
+}
+
+.form-page button{
+    padding: 0.8rem 0.4rem;
+    text-transform: uppercase;
+    background-color: rgb(5, 73, 5);
+    color: white;
+    margin: 10px;
+}
+
+.form-page .fa-arrow-right{
+    padding-left: 20px;
+    color: white;
+}
+.form-page{
+    /* border: 1px solid; */
+    box-shadow: 0px 0px 10px;
+    width: 588px;
+    padding: 30px;
+    /* border-radius: 10px; */
+    border-top: 10px solid green;
+}
+/* form page ends here */
+
+
+
+
+/* media query */
+
+@media (max-width:767px){
+
+/* contact page starts here */
+
+.contact-page h3{
+    font-family:cursive;
+    color: green;
+    font-style: italic;
+    padding-bottom: 20px;
+}
+
+.contact-page h2{
+    padding-bottom: 20px;
+}
+
+.contact-page p{
+ padding-bottom: 20px;
+}
+
+.contact-page .cont-phone{
+    display: flex;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+
+
+
+.contact-page .cont-envelope{
+    display: flex;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+
+.contact-page .cont-location{
+    display: flex;
+   gap: 10px;
+}
+
+
+
+.contact-page .fa-solid{
+    font-size: 0.9rem;
+    border: 1px solid;
+    border-radius: 30px;
+    padding: 15px;
+    color: green;
+    background-color: rgb(247, 245, 245);
+}
+
+
+.contact-page .cont-location p{
+    line-height: 1.5rem;
+}
+
+
+.contact-page .cont-phone p{
+    line-height: 1.5rem;
+}
+
+.contact-page .cont-envelope p{
+    line-height: 1.5rem;
+}
+
+
+/* contact page ends here */
+
+
+
+/* universal */
+
+.contact-form{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-around;
+margin: 90px;
+
+
+}
+/* universla ends here */
+
+
+/* form page starts here */
+
+.form-page h3{
+
+    font-family:cursive;
+    color: green;
+    font-style: italic;
+    padding-bottom: 20px;
+    margin: 10px;
+}
+
+
+.form-page h2{
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px;
+}
+
+
+
+.form-page input{
+    display: grid;
+    padding: 1rem 1rem;
+    width: 500px;
+    margin: 10px;
+    background-color: rgb(177, 171, 171);
+    border: none;
+
+}
+.form-page textarea{
+    display: grid;
+    margin: 10px;
+    padding: 10px;
+    width: 500px;
+}
+
+.form-page button{
+    padding: 0.8rem 0.4rem;
+    text-transform: uppercase;
+    background-color: rgb(5, 73, 5);
+    color: white;
+    margin: 10px;
+}
+
+.form-page .fa-arrow-right{
+    padding-left: 20px;
+    color: white;
+}
+.form-page{
+    border: 1px solid;
+    padding: 30px;
+    border-radius: 10px;
+    border-top: 10px solid green;
+}
+/* form page ends here */
+
+
+}
+
+
+
+
+
+
+@media (max-width:720px)and(min-width:625){
+
+
+
+/* universal */
+
+.contact-form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 90px;
+    
+    
+    }
+    /* universla ends here */
+    
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media query ends here */
