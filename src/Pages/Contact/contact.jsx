@@ -6,25 +6,91 @@ import { FaEyeSlash } from "react-icons/fa";
 
 const contact = () => {
   
-  const [result, setResult] = useState("");
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("")
-  const [email, setEmail] = useState("")
-  const [message, setMessage] = useState("")
+  
+  const [formData, setFormData] = useState({
+     result: "",
+     name: "",
+     email: "",
+     phone: "",
+     message: "",
+     errors:{}
+
+  });
+
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ 
+      ...formData, 
+      [name]: value,
+      errors: { ...formData.errors, [name]: value.trim() === "" }
+    });
+  };
 
 
   function handleSubmit(e) {
     e.preventDefault();
-  let setResult =`Form has been submitted with with Input: ${name}. Email me on:${email}. Contact me on:${phone}. My message: ${message}` ;
 
-  alert(setResult)
+const { name, email, phone, message} = formData;
+const errors = {};
+
+setFormData({
+  ... formData,
+  result: "",
+  name: "",
+  email: "",
+  phone: "",
+  message: ""
+});
+
+
+
+if (!name.trim()) {
+  errors.name = true;
+}
+
+if (!email.trim()) {
+  errors.email = true;
+}
+
+if (!phone.trim()) {
+  errors.phone = true;
+}
+
+if (!message.trim()) {
+  errors.message = true;
+}
+
+if (Object.keys(errors).length > 0) {
+  setFormData({ ...formData, errors });
+  return;
+}
+
+
+
+console.log(formData);
+
+setFormData({
+  ...formData,
+  result: `Form has been submitted with Input: ${name}. Email me on:${email}. Contact me on:${phone}. My message: ${message}`,
+  name: "",
+  email: "",
+  phone: "",
+  message: "",
+  errors: {}
+});
+
+  
+
+
+
+
+
  
   }
 
 
 
-
- 
   return (
     <div className="contact">
       <link
@@ -93,38 +159,67 @@ const contact = () => {
 <form action="" onSubmit={handleSubmit}>
             <input
               type="text"
-              name="F-name" 
+              name="name" 
+              id="fullName"
               placeholder="Full Name*"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
+              value={formData.name}
+              // value={name}
+              // onChange={(e) => setName(e.target.value)}
+              // onChange={handleName}
+              onChange={handleInputChange}
+             
             />
+ {formData.errors.name && <p className="error-message">Please input your name</p>}
+         
+           
             <input
               type="email"
-              name="Email"
+              name="email"
+              id="email"
               placeholder="Email Address"
-             value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
+              value={formData.email}
+            //  value={email}
+              // onChange={(e) => setEmail(e.target.value)}
+              // onChange={handleEmail}
+              onChange={handleInputChange}
+            
             />
+
+{formData.errors.email && <p className="error-message">Please input your email</p>}
+
             <input
-              type="phone"
+              type="tel"
               name="phone"
+              id="phone"
               placeholder="phone"
-             value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              required
+              value={formData.phone}
+            //  value={phone}
+              // onChange={(e) => setPhone(e.target.value)}
+              // onChange={handlePhone}
+              onChange={handleInputChange}
+             
             />
+
+{formData.errors.phone && <p className="error-message">Please input your phone number</p>}
+
             <textarea
-              name=""
-              id=""
+              name="message"
+              
+              id="message"
               cols="30"
               rows="3.5"
               placeholder="Wite a Message*"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              required
-            ></textarea>
+              value={formData.message}
+              // value={message}
+              // onChange={(e) => setMessage(e.target.value)}
+              // onChange={handleMessage}
+              onChange={handleInputChange}
+            
+            >
+    
+            </textarea>
+
+            {formData.errors.message && <p className="error-message">Please fill in the message box</p>}
 
             <button type="submit">
               Send Message <i className="fa-solid fa-arrow-right"></i>{" "}
@@ -133,10 +228,12 @@ const contact = () => {
 
 
 
-
-
-
-          <h4>{result}</h4>
+          {formData.result && (
+            <div>
+              <h4>Result:</h4>
+              <p>{formData.result}</p>
+            </div>
+          )}
           
           
    
